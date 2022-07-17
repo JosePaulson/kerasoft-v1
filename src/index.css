@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+  
 /* @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); */
 
 /* zilla-slab-700 - latin */
@@ -94,7 +94,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: 'Fira Sans';
 }
 
 /*! navbar */

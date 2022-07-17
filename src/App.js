@@ -16,6 +16,7 @@ import Products from "./routes/Products";
 import Careers from "./routes/Careers";
 import Error from "./routes/Error";
 import ProductDetail from "./components/ProductDetail";
+import Contact from "./routes/Contact";
 function App() {
 
     const {pathname} = useLocation()
@@ -46,6 +47,7 @@ function App() {
                                 <Route path="/products" element={<Products />} />
                                 <Route path="/products/:id" element={<ProductDetail />} /> 
                                 <Route path="/careers" element={<Careers />} />
+                                <Route path="/contact" element={<Contact/>} />
                                 <Route path="*" element={<Error />} />
                             </Routes>
                         </div>
