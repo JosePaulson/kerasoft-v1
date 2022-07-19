@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { FaWhatsapp } from 'react-icons/fa'
 import Footer from "./components/Footer";
 import About from "./routes/About";
-import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import {Routes, Route, useLocation} from 'react-router-dom'
@@ -17,6 +16,8 @@ import Careers from "./routes/Careers";
 import Error from "./routes/Error";
 import ProductDetail from "./components/ProductDetail";
 import Contact from "./routes/Contact";
+import LandingPage from "./routes/LandingPage";
+import Home from "./routes/Home";
 function App() {
 
     const {pathname} = useLocation()
@@ -31,14 +32,17 @@ function App() {
                 <ScrollToTop />
                 <div className="drawer">
                     <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
-                    <div className="drawer-content relative">
-                        <a href="https://api.whatsapp.com/send?phone=13653640333" className={`md:hidden fixed top-[5rem] right-2 sm:right-7 z-20 rounded-full p-2 bg-white ${pathname==='/blogspot' || pathname==='/careers' ? 'hidden' : 'block'}`}>
-                            <FaWhatsapp size={32} fill={'#128C7E'}/>
-                        </a>
-                        <Navbar />
+                    <div className={`drawer-content relative ${(pathname === '/') && 'bg-gradient-to-br from-orange-500 to-primary'}`}>
+                        {pathname!=='/' && 
+                            <a href="https://api.whatsapp.com/send?phone=13653640333" className={`md:hidden fixed top-[5rem] right-2 sm:right-7 z-20 rounded-full p-[.3rem] bg-white ${pathname==='/blogspot' || pathname==='/careers' ? 'hidden' : 'block'}`}>
+                                <FaWhatsapp size={32} fill={'#128C7E'}/>
+                            </a>
+                        }
+                        {pathname!=='/' && <Navbar/>}
                         <div className="">
                             <Routes>
-                                <Route path="/" element={<Hero />} />
+                                <Route path="/" element={<LandingPage />} />
+                                <Route path="/home" element={<Home />} />
                                 <Route path="/about" element={<About />} />
                                 <Route path="/web" element={<Web />} />
                                 <Route path="/internetofthings" element={<InternetOfThings />} />
@@ -51,7 +55,7 @@ function App() {
                                 <Route path="*" element={<Error />} />
                             </Routes>
                         </div>
-                        <Footer />
+                        {pathname!=='/' && <Footer />}
                     </div>
                     <Sidebar />
                 </div>
