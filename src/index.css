@@ -149,3 +149,24 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.balloon {
+  animation: swing 10s linear infinite alternate forwards;
+}
+
+
+@keyframes swing {
+  25% {
+    transform: scale(.96) translate(4px, -50.1%);
+  }
+  50% {
+    transform: translate(8px, -50.2%);
+  }
+  75% {
+    transform: scale(1.01) translate(4px, -50.1%);
+  }
+  100% {
+    transform: translate(-2px, -50.05%);
+  }
+}
+
