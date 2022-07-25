@@ -1,18 +1,8 @@
-import CareerImg from '../images/career.svg'
 import OpeningsBg from '../images/undraw_working_re_ddwy.svg'
 import FileInputWithEmail from '../components/FileInputWithEmail';
 function Careers() {
     return ( 
         <div className="flex flex-col container mx-auto p-4">
-            {/* <div className='hidden lg:flex flex-col-reverse mt-4 lg:flex-row-reverse lg:mt-8 max-w-[1200px] lg:mx-auto'>
-                <div className='md:mx-auto md:my-auto text-center mb-10 mt-16 2xl:pt-24 2xl:ml-auto 2xl:mx-0 2xl:pr-20'>
-                    <h2 className='text-3xl uppercase md:text-3xl lg:text-4xl 2xl:text-[3.4rem] text-slate-700 mb-4 lg:mb-8 2xl:mb-10 font-medium'>Join Our Team</h2>
-                    <p className='text-[1.05rem] text-base-100 lg:text-2xl 2xl:text-3xl bg-slate-800 py-3 pl-6 rounded-lg inline px-4 uppercase text-center'>We are hiring 🤞</p>
-                    <p className='mt-4 lg:text-xl'>Bengaluru 📌 </p>
-                    <p className='lg:text-xl'>Remote 📌 </p>
-                </div>
-                <img className='careerImg w-10/12 mx-auto md:w-1/2 md:mx-0 lg:w-5/12' src={CareerImg} alt="" />
-            </div> */}
             <div className='flex flex-col lg:flex-row items-end'>
                 <img className='mt-1 lg:w-1/2' src={OpeningsBg} alt="" />
                 <div  className='lg:flex flex-col text-center mx-auto mt-8 hidden drop-shadow-[0_35px_35px_rgba(245,0,87,0.15)]'>
