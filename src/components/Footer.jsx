@@ -41,7 +41,7 @@ function Footer() {
                     </div>
                 </div>
             </footer>
-            <small className='mx-auto block text-center bg-base-200 py-4'>Kerasoft @ 2022 | All rights reserved</small>
+            <small className='mx-auto block text-center bg-base-200 py-4'>Kerasoft <span className='inline-flex  text-[1rem]'>&copy;</span> 2022 | All rights reserved</small>
         </>
      );
 }

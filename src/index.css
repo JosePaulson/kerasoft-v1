@@ -151,8 +151,10 @@ body {
 }
 
 .balloon {
+  max-height: calc(100vh - 3rem);
   animation: swing 10s linear infinite alternate forwards;
 }
+
 
 
 @keyframes swing {
@@ -170,3 +172,39 @@ body {
   }
 }
 
+.careerImg {
+  animation: zoom 8s linear infinite alternate forwards;
+}
+
+@keyframes zoom {
+  33% {
+    transform: scale(1.03);
+  }
+
+  66% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(.995);
+  }
+}
+
+.arrowUp {
+  animation: flicker 3s linear infinite forwards;
+}
+
+@keyframes flicker {
+  25% {
+    transform: translateY(-.2rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(.2rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

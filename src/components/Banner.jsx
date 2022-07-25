@@ -5,7 +5,7 @@ import Bg from '../images/balloonBg.svg'
 
 function Banner() {
   return (
-    <div className=''>
+    <div className='h-screen'>
       <div className='flex flex-col mx-auto md:items-center lg:flex-row-reverse lg:justify-around lg:max-w-[1300px] '>
         <div className='relative w-[100vw] h-[96vw] md:w-[70vw] md:h-[66vw] lg:w-[44vw] lg:h-[40vw] 2xl:w-[47vw] 2xl:h-[43vw]'>
           <img src={Bg} alt="" className='absolute top-[50%] -translate-y-1/2 lg:top-[60%] 2xl:top-[50%] ' />
