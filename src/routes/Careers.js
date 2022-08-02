@@ -2,12 +2,12 @@ import OpeningsBg from '../images/undraw_working_re_ddwy.svg'
 import FileInputWithEmail from '../components/FileInputWithEmail';
 function Careers() {
     return ( 
-        <div className="flex flex-col container mx-auto p-4">
+        <div className="flex flex-col container mx-auto p-4 lg:pt-20">
             <div className='flex flex-col lg:flex-row items-end'>
                 <img className='mt-1 lg:w-1/2' src={OpeningsBg} alt="" />
-                <div  className='lg:flex flex-col text-center mx-auto mt-8 hidden drop-shadow-[0_35px_35px_rgba(245,0,87,0.15)]'>
-                    <p className=' lg:text-[6.5em] xl:text-[7.5em] 2xl:text-[10em] uppercase text-slate-700 lg:w-full font-bold lg:leading-[4.7rem] xl:leading-[5.4rem] 2xl:leading-[7.2rem]'><span className='text-slate-600'>Join</span> <br/> <span>Our</span> <br/> <span className='text-slate-800'>Team!</span></p>
-                    <p className='uppercase mt-4 text-2xl text-[#f50057] font-medium leading-wider'>hiring now 🤞</p>
+                <div className='hidden lg:flex lg:flex-col text-center mx-auto mt-8]'>
+                    <p className=' lg:text-[4.8em] xl:text-[6em] 2xl:text-[7em] uppercase text-slate-700 lg:w-full font-bold lg:leading-[3.4rem] xl:leading-[4.3rem] 2xl:leading-[5rem]'><span className='text-slate-600'>Join</span> <br/> <span>Our</span> <br/> <span className='text-slate-800'>Team!</span></p>
+                    <p className='uppercase mt-4 text-2xl text-[#f50057] font-medium leading-wider pl-7'>hiring now 🤞</p>
                 </div>
             </div>
             <div className='relative border-b-2 border-violet-500 mb-6 mt-10 lg:mt-24 opacity-70'>
@@ -18,7 +18,15 @@ function Careers() {
                     Front-end Developer
                 </div>
                 <div className="collapse-content"> 
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                <p className='text-primary'>HTML, CSS, JS with <strong>THREE YEARS</strong> of minimum experience preffered.</p>
+                    <ul className='pl-2'>
+                        <li>✅ React or Svelte</li>
+                        <li>✅ Bootstrap V5, Material UI, Tailwind or just toooo good with plain CSS</li>
+                        <li>✅ Basic understanding on Http and WebSockets</li>
+                        <li>✅ Atleast 5 projects to showcase your expertise</li>
+                        <li>✅ Should be good with VCSs like GIT or Mercurial</li>
+                        <li>✅ Basics of Photoshop, AI or Figma </li>
+                    </ul>
                 </div>
             </div>
             <div tabIndex="0" className="collapse collapse-arrow border-b-2">
@@ -26,23 +34,38 @@ function Careers() {
                     Front-end Designer
                 </div>
                 <div className="collapse-content"> 
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                <p className='text-primary'>Figma, Photoshop, AI or any design tool of your choice but be magician with it.</p>
+                <ul className='pl-2'>
+                    <li>✅ Basic understanding on HTML, CSS</li>
+                    <li>✅ Atleast 10 projects to showcase your expertise</li>
+                    <li>✅ Good with fonts, shades and shapes </li>
+                </ul>
                 </div>
             </div>
             <div tabIndex="0" className="collapse collapse-arrow border-b-2">
                 <div className="collapse-title text-xl text-[1.15rem]">
-                    Php/NodeJs Developer
+                    Python/NodeJs Developer
                 </div>
                 <div className="collapse-content"> 
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p className='text-primary'>Django, Flask or ExpressJs developer with <strong>TWO YEARS</strong> of minimum experience preffered.</p>
+                    <ul className='pl-2'>
+                        <li>✅ Basic understanding on front-end technologies</li>
+                        <li>✅ Atleast 3 projects to showcase your expertise</li>
+                        <li>✅ Should be good with VCSs like GIT or Mercurial</li>
+                        <li>✅ Databases</li>
+                    </ul>
                 </div>
             </div>
             <div tabIndex="0" className="collapse collapse-arrow border-b-2">
                 <div className="collapse-title text-xl text-[1.15rem]">
-                    Business Development Exe
+                    Business Development Exec
                 </div>
                 <div className="collapse-content"> 
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                <p className='text-primary'>It's a gift to be able to pitch sales with just What we have to offer and no gimmicks. Looking for someone special.</p>
+                    <ul className='pl-2'>
+                        <li>✅ Best communication skills</li>
+                        <li>✅ English, Malayalam, Kannada, Hindi (Atleast two)</li>
+                    </ul>
                 </div>
             </div>
             <FileInputWithEmail />

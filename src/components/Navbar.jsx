@@ -15,15 +15,15 @@ function Navbar() {
                 </div>
                 <div className="flex-1">
                     <Link className={`px-1 rounded kerasoftLogo text-primary text-2xl dark:bg-[#fefefe] dark:text-[#570df8]`} to={"/home"}>{`ker^s<>ft`}</Link>
-                    <ul className="ml-10 marginForChildren md:flex hidden font-medium">
-                        <li className={dark ? null : 'menuListItem'}>
-                            <Link    to={"/web"}>Web</Link>
+                    <ul className="ml-10 marginForChildren md:flex hidden text-md">
+                        <li className={dark ? null : 'text-cyan-800'}>
+                            <Link to={"/web"}>WebApps</Link>
                         </li>
-                        <li className={dark ? null : 'menuListItem'}>
-                            <Link to={"/internetofthings"}>iOT</Link>
+                        <li className={dark ? null : 'text-cyan-800'}>
+                            <Link to={"/internetofthings"}>DigitalElectronics</Link>
                         </li>
-                        <li className={dark ? null : 'menuListItem'}>
-                            <Link to={"/opencv"}>OpenCV</Link>
+                        <li className={dark ? null : 'text-cyan-800'}>
+                            <Link to={"/opencv"}>DeepLearning</Link>
                         </li>
                     </ul>
                 </div>

@@ -19,20 +19,20 @@ function Sidebar() {
                             <FaArrowLeft size={'20px'}/>
                         </button>
                     </div>
-                    <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/'}><FaHome size={23} className='inline-block mb-3 mr-2 mt-[-3px]'/> HOME</Link>
+                    <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/home'}><FaHome size={23} className='inline-block mb-3 mr-2 mt-[-3px]'/> HOME</Link>
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/about'}><FaGlobe size={22} className='inline-block mb-3 mr-2 mt-[-2px]'/> ABOUT</Link>
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/products'}><FaChessRook size={23} className='inline-block mb-3 mr-2 mt-[-2px]'/> PRODUCTS<div className=' badge-md badge-neutral text-error'>New</div></Link>
                     <Link className='flex hover:text-gray-400 pt-1' to={'/blogspot'} onClick={autoToggle}><FaBloggerB size={23} className='inline-block mb-3 mr-2 mt-[-2px]'/> BLOGSPOT <div className=' badge-md badge-neutral text-error'>New</div><div className='badge badge-md badge-warning ml-auto text-primary'>+5</div></Link>
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/careers'}><ImBriefcase size={22} className='inline-block mb-3 mr-2 mt-[-2px]'/>CAREERS</Link>
-                    <ul className="mt-8 font-medium">
-                        <li className='menuListItem'><a className='active:bg-transparent' href='/'>Who We Are?</a></li>
-                        <li className='menuListItem'><a className='active:bg-transparent' href='/' >What We Do?</a></li>
-                        <li className='menuListItem'><a className='active:bg-transparent' href='/' >Kerasoft.org</a></li>
-                    </ul>
-                    <div className=' mt-10 pl-1 text-md mb-8'>
-                        <Link className='bg-primary text-primary-content py-2 px-3 rounded-l' onClick={autoToggle} to={"/web"}>Web</Link>
-                        <Link className='bg-warning text-slate-900 font-medium py-3 px-4 rounded' onClick={autoToggle} to={"/internetofthings"}>iOT</Link>
-                        <Link className='bg-slate-800 text-primary-content py-2 px-3 rounded-r' onClick={autoToggle} to={"/opencv"}>OpenCV</Link>
+                        <ul className="mt-4 lg:mt-6 ">
+                            <li className='menuListItem'><a className='active:bg-transparent' href='/'>Who We Are?</a></li>
+                            <li className='menuListItem'><a className='active:bg-transparent' href='/' >What We Do?</a></li>
+                            <li className='menuListItem'><a className='active:bg-transparent' href='/' >Kerasoft.org</a></li>
+                        </ul>
+                    <div className='flex flex-col mt-6 lg:mt-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-violet-800 font-medium'>
+                        <Link className='mb-5 pl-4' onClick={autoToggle} to={"/web"}>WebApps</Link>
+                        <Link className='mb-5 pl-4' onClick={autoToggle} to={"/internetofthings"}>DigitalElectronics</Link>
+                        <Link className='pl-4' onClick={autoToggle} to={"/opencv"}>DeepLearning</Link>
                     </div>
                     <div className='flex flex-col ml-auto absolute bottom-2 right-0'>
                         <FaFacebook className='mb-2 hover:fill-[#3c0053]' size={24} fill='#4267B2'/>

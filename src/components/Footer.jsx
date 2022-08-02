@@ -24,9 +24,9 @@ function Footer() {
                 </div> 
                 <div>
                     <span className="footer-title">Legal</span> 
-                    <a href="/" className="link link-hover">Terms of use</a> 
-                    <a href="/" className="link link-hover">Privacy policy</a> 
-                    <a href="/" className="link link-hover">Cookie policy</a>
+                    <Link to='/terms' className="link link-hover">Terms of use</Link> 
+                    <Link to='/privacy' className="link link-hover">Privacy policy</Link> 
+                    <Link to='/cookie' className="link link-hover">Cookie policy</Link>
                 </div> 
                 <div className=''>
                     <span className="footer-title">Newsletter</span> 

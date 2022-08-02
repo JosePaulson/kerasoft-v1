@@ -19,6 +19,7 @@ import Contact from "./routes/Contact";
 import LandingPage from "./routes/LandingPage";
 import Home from "./routes/Home";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import Privacy from "./routes/Privacy";
 function App() {
 
     const {pathname} = useLocation()
@@ -31,7 +32,7 @@ function App() {
     return ( 
         <>  
             <ScrollToTopButton />
-            <ScrollToTop/>
+            <ScrollToTop />
             <div className="drawer">
                 {/* <div className="absolute inset-0 bg-[#fffd] z-30 px-6 py-3 flex items-center">
                     <div className="w-full h-80 bg-[#000c] shadow-2xl rounded-lg">
@@ -59,7 +60,8 @@ function App() {
                             <Route path="/products/:id" element={<ProductDetail />} /> 
                             <Route path="/careers" element={<Careers />} />
                             <Route path="/contact" element={<Contact/>} />
-                            <Route path="*" element={<Error />} />
+                            <Route path="/privacy" element={<Privacy/>} />
+                            <Route path={'/*'} element={<Error />} />
                         </Routes>
                     </div>
                     {pathname!=='/' && <Footer />}
