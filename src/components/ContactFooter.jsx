@@ -3,7 +3,7 @@ import { FaEnvelope, FaWhatsappSquare, FaPhoneAlt, FaAddressCard } from 'react-i
 import { Link } from 'react-router-dom';
 
 function ContactFooter() {
-    const weather = `23°`
+    const weather = 23
     return (
         <div className='mx-10 md:mx-auto mt-10 tracking-wide flex flex-col md:justify-around md:flex-row'>
             <div className=''>
@@ -21,7 +21,15 @@ function ContactFooter() {
                 <Link to='/' className='text-xl lg:text-[1.4rem] mb-1 flex items-center'><FaAddressCard size={23} className='mr-3'/>311 Kappa Square</Link>
                 <p className='text-[1.2rem] lg:mt-1 font-thin flex flex-col mb-6'>
                     <span>Bengaluru, KA</span>
-                    <span>India, 570086 | ⛅ {weather}</span>
+                    <span>India, 570086 | ⛅ {weather}°</span>
+                </p>
+            </div>
+            <div>
+                <p className='lg:text-[1.2rem] mb-3 lg:mb-4 mt-2 md:mt-0 text-secondary'>Heartquarters</p>
+                <Link to='/' className='text-xl lg:text-[1.4rem] mb-1 flex items-center'><FaAddressCard size={23} className='mr-3'/>53 Fiesto Building</Link>
+                <p className='text-[1.2rem] lg:mt-1 font-thin flex flex-col mb-6'>
+                    <span>Cannanore, KL</span>
+                    <span>India, 670047 | ⛅ {weather + 6}°</span>
                 </p>
             </div>
         </div>

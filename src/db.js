@@ -84,6 +84,21 @@ const db = [
         units: 8
 
     },
+    {
+        title: 'WiFi Repeater APR02',
+        model: 'APR02',
+        desc: 'WiFi repeater for extending your WiFi\'s range, upto 10m',
+        details: {
+            productDesc: 'APR02 is designed to extend your WiFi\'s strength by repeating the packets/transmission upto 10 meters with no sever obstacles. Easy to setup and can be configured using your personal computer. This product is customizable pre-order with a battery option or AC only.',
+            service: 1,
+            installation: 'Self/Telephonic assistance',
+            return: 7,
+            keywords: ['WiFi']
+        },
+        image: ['https://i.im.ge/2022/08/25/OjPUIc.APR02-1.webp','https://i.im.ge/2022/08/25/OjPLQT.APR02-2.webp'],
+        unitPrice : 399,
+        units: 12
+    },
 ]
 
 export default db

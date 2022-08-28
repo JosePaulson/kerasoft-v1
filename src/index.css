@@ -172,29 +172,54 @@ body {
   }
 }
 
-.careerImg {
-  animation: zoom 8s linear infinite alternate forwards;
+.notify {
+  animation: flicker 5s linear;
 }
 
-@keyframes zoom {
-  33% {
-    transform: scale(1.03);
+@keyframes flicker {
+  10% {
+    opacity: .4;
   }
 
-  66% {
-    transform: scale(1);
+  20% {
+    opacity: .7;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  63% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+
+  71% {
+    opacity: 0;
+  }
+
+  74% {
+    opacity: 1;
+  }
+  87% {
+    opacity: .5;
   }
 
   100% {
-    transform: scale(.995);
+    opacity: 0;
   }
 }
 
 .arrowUp {
-  animation: flicker 3s linear infinite forwards;
+  animation: upAndDown 3s linear infinite forwards;
 }
 
-@keyframes flicker {
+@keyframes upAndDown {
   25% {
     transform: translateY(-.2rem);
   }

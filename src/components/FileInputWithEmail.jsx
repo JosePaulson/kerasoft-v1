@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaEnvelope, FaArrowUp } from 'react-icons/fa'
-import { useNavigate } from 'react-router-dom'
 import {
   getStorage,
   ref, 
@@ -15,7 +14,18 @@ function FileInputWithEmail() {
     email: '',
     resume: {}
   })
-  const navigate = useNavigate()
+  const [notify, setNotify] = useState({
+    msg: '',
+    color: '#fff',
+    display: 'hidden'
+  })
+
+  useEffect(()=>{
+    setTimeout(() => {
+      setNotify('', '#fff', 'hidden')
+    }, 5000);
+  }, [notify.msg])
+
   const handleChange = (e) => {
     if(!e.target.files) {
       setFormData(prev => {
@@ -37,12 +47,11 @@ function FileInputWithEmail() {
   }
 
   const onSubmit = async (e) => {
-      e.preventDefault()
-      setLoading(true)
-
+    e.preventDefault()
+    setLoading(true)
       if(!formData.resume.length) {
         setLoading(false)
-        // toast.warning('No file to upload.')
+        notifyMe('Select resume to upload', 'primary', 'inline-block')
         return
       }
 
@@ -83,7 +92,7 @@ function FileInputWithEmail() {
         [...formData.resume].map((resume)=> storeResume(resume))
       ).catch(() => {
           setLoading(false)
-          // toast.error('Resume not uploaded')
+          notifyMe('Resume not uploaded, try agian', 'error', 'inline-block')
           return
       })
       // console.log(resumeUrl)
@@ -97,21 +106,44 @@ function FileInputWithEmail() {
 
     await addDoc(collection(db, 'resumes'), formDataCopy)
     setLoading(false)
-    navigate(`/home`)
-    // toast.success('Resume uploaded')
+    notifyMe('We\'ve got it, fingers crossed🤞', 'secondary', 'inline-block' )
+    setFormData(prev => ({...prev, email:'', resume:''}))
+  }
+
+  const onClick = () => {
+    if(window.innerWidth < 800) {
+
+      document.querySelector('.drawer-content').scrollTo({
+          top: 480,
+          behavior: 'smooth'
+      })
+    }
+  }
+  const {msg, color, display} = notify
+
+  function notifyMe(msg='', color='#fff', display='hidden') {
+    setNotify(prev => {
+      return {
+        ...prev,
+        msg,
+        color,
+        display,
+      }
+    })
   }
 
   return (
     <form className='relative mt-20  mb-4 pb-1 border-b-[1px] border-[#f50057] flex' onSubmit={onSubmit}>
         <div className='flex flex-initial w-full'>
           <FaEnvelope size={24} fill='#f50057' />
-          <input 
+          <input
+            onClick={onClick}
             id='email'
             onChange={handleChange}
             value={formData.email}
             type="email" 
             placeholder='Enter your email' 
-            className='w-full pl-2 focus:outline-none' 
+            className='resume w-full pl-2 focus:outline-none' 
             required
           />
         </div>
@@ -133,10 +165,11 @@ function FileInputWithEmail() {
         />
         <button 
           type='submit' 
-          className='absolute btn btn-ghost bottom-[-3.4rem] text-slate-700 tracking font-medium'
+          className='absolute btn btn-sm btn-ghost bottom-[-2.8rem] text-slate-700 tracking font-medium'
         >
-          {loading ? 'Dispatching...' : 'Dispatch' }
+          { loading ? 'Dispatching...' : 'Dispatch' }
         </button>
+        <p className={`text-thin text-sm absolute bottom-[-2rem] right-4 ${display} text-${color}`}>{msg}</p>
     </form>
   )
 }
