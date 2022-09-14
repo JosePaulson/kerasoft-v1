@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Spinner from './Spinner'
 import { db } from '../firebase.config'
 import { collection, getDocs } from 'firebase/firestore'
-
+import GooglePayButton from '@google-pay/button-react'
 
 function ProductDetail() {
     const params = useParams()
@@ -55,7 +55,54 @@ function ProductDetail() {
             <p className='mt-2 text-[#372e5c] text-[1.2rem]'>Mode of install: {details.installation}</p>
             <p className='mt-2 text-[#372e5c] text-[1.2rem]'>Free service: {details.service} months**</p>
             <p className='mt-2 text-[#372e5c] text-[1.2rem]'>Return period: {details.return} {isNaN(details.return) ? '' : 'days'}</p>
-    </div> 
+            <div>
+                <GooglePayButton 
+                    environment = 'TEST'
+                    paymentRequest={{
+                        apiVersion:2,
+                        apiVersionMinor:0,
+                        allowedPaymentMethods:[
+                            {
+                                type: "CARD",
+                                parameters:{
+                                    allowedAuthMethods:["CRYPTOGRAM_3DS", "PAN_ONLY"],
+                                    allowedCardNetworks:["MASTERCARD", "VISA"]
+                                },
+                                tokenizationSpecification:{
+                                    type:"PAYMENT_GATEWAY",
+                                    parameters:{
+                                        gateway: "UPI",
+                                        gatewayMerchantId: "BCR2DN4T4CR3X7DV",
+                                    }
+                                }
+                            }
+                        ],
+                        merchantInfo:{
+                            merchantId: "1234566789",
+                            merchantName: "Kerasoft India",
+                        },
+                        transactionInfo: {
+                            totalPrice: "1", 
+                            totalPriceStatus: 'FINAL',
+                            totalPriceLabel: "TOTAL",
+                            currencyCode: "INR",
+                            countryCode: "IN"
+                        },
+                        shippingOptionRequired: false,
+                        callbackIntents:["PAYMENT_AUTHORIZATION"],
+                    }}
+                    onLoadPaymentData = {paymentRequest => console.log(paymentRequest)}
+                    onPaymentAuthorized = {paymentData => {
+                        console.log(paymentData);
+                        return {transactionState: 'SUCCESS'}
+                    }}
+                    existingPaymentMethodRequired = 'false'
+                    buttonColor='black'
+                    buttonType='Buy'
+                >          
+                </GooglePayButton>
+            </div>
+        </div>
     </div>
   )
 }

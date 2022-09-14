@@ -21,6 +21,7 @@ import Home from "./routes/Home";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Privacy from "./routes/Privacy";
 import Form from "./routes/Form";
+import Terms from "./routes/Terms";
 function App() {
 
     const {pathname} = useLocation()
@@ -43,8 +44,8 @@ function App() {
                 <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
                 <div className={`drawer-content relative ${(pathname === '/') && 'bg-gradient-to-br from-orange-500 to-primary'}`}>
                     {(pathname!=='/' && pathname!=='/contact-form') && 
-                        <a href="https://api.whatsapp.com/send?phone=13653640333" className={`md:hidden fixed top-[5rem] right-2 sm:right-7 z-20 rounded-full p-[.3rem] bg-white ${pathname==='/blogspot' || pathname==='/careers' ? 'hidden' : 'block'}`}>
-                            <FaWhatsapp size={32} fill={'#128C7E'}/>
+                        <a href="https://api.whatsapp.com/send?phone=13653640333" className={`md:hidden fixed top-[5rem] right-4 sm:right-7 z-20 rounded-full p-[.4rem] bg-black ${pathname==='/blogspot' || pathname==='/careers' ? 'hidden' : 'block'}`}>
+                            <FaWhatsapp size={30} fill={'#fff'}/>
                         </a>
                     }
                     {pathname!=='/' && <Navbar />}
@@ -63,6 +64,7 @@ function App() {
                             <Route path="/contact" element={<Contact/>} />
                             <Route path="/privacy" element={<Privacy/>} />
                             <Route path="/contact-form" element={<Form/>} />
+                            <Route path="/terms" element={<Terms />} />
                             <Route path={'/*'} element={<Error />} />
                         </Routes>
                     </div>

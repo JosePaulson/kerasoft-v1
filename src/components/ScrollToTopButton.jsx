@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
         <div>
             {(pathname!=='/') && 
                 <div onClick={onClick} className={`arrowUp md:right-16 fixed bottom-[1rem] right-4 sm:right-7 z-20 rounded-md p-[.4rem] bg-white ${!visible && 'hidden'}`}>
-                    <FaArrowUp className="" size={20} fill={'#570df8aa'}/>
+                    <FaArrowUp className="" size={20} fill={'#000'}/>
                 </div>
             }
         </div>

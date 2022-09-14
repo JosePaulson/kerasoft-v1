@@ -1,4 +1,4 @@
-import {FaHome, FaBloggerB, FaChessRook, FaFacebook, FaGithub, FaTwitter, FaCodepen, FaArrowLeft, FaGlobe} from 'react-icons/fa'
+import {FaHome, FaChessRook, FaFacebook, FaGithub, FaTwitter, FaCodepen, FaArrowLeft, FaGlobe} from 'react-icons/fa'
 import {ImBriefcase} from 'react-icons/im'
 import {Link} from 'react-router-dom'
 function Sidebar() {
@@ -22,7 +22,8 @@ function Sidebar() {
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/home'}><FaHome size={23} className='inline-block mb-3 mr-2 mt-[-3px]'/> HOME</Link>
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/about'}><FaGlobe size={22} className='inline-block mb-3 mr-2 mt-[-2px]'/> ABOUT</Link>
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/products'}><FaChessRook size={23} className='inline-block mb-3 mr-2 mt-[-2px]'/> PRODUCTS<div className=' badge-md badge-neutral text-error'>New</div></Link>
-                    <Link className='flex hover:text-gray-400 pt-1' to={'/blogspot'} onClick={autoToggle}><FaBloggerB size={23} className='inline-block mb-3 mr-2 mt-[-2px]'/> BLOGSPOT <div className=' badge-md badge-neutral text-error'>New</div><div className='badge badge-md badge-warning ml-auto text-primary'>+5</div></Link>
+                    {/* page to be build */}
+                    {/* <Link className='flex hover:text-gray-400 pt-1' to={'/blogspot'} onClick={autoToggle}><FaBloggerB size={23} className='inline-block mb-3 mr-2 mt-[-2px]'/> BLOGSPOT <div className=' badge-md badge-neutral text-error'>New</div><div className='badge badge-md badge-warning ml-auto text-primary'>+5</div></Link> */}
                     <Link onClick={autoToggle} className='flex hover:text-gray-400 pt-1' to={'/careers'}><ImBriefcase size={22} className='inline-block mb-3 mr-2 mt-[-2px]'/>CAREERS</Link>
                         <ul className="mt-4 lg:mt-6 ">
                             <li className='menuListItem'><a className='active:bg-transparent' href='/'>Who We Are?</a></li>

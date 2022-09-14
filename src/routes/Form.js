@@ -7,10 +7,11 @@ function Form() {
     const [formData, setFormData] = useState({
         ...formDetails,
         date: "",
+        budget: ""
     })
     const [blur, setBlur] = useState({name:false, email:false, contact:false})
 
-    const {name, email, contact, company, date, button} = formData
+    const {name, email, contact, company, date, button, budget} = formData
     console.log(formData)
 
     const handleChange = (e) => {
@@ -105,7 +106,25 @@ function Form() {
                         onChange={handleChange}
                     />
                 </div>
-                <button type='submit' className='btn btn-primary 2xl:btn-lg mt-2'>
+                <div className='relative'>
+                    <label className='text-[.95rem] text-black absolute bg-white px-1 top-[-8px] left-4'>Budget</label>
+                    <select 
+                        id="budget"
+                        className='bg-white block w-full mt-1 border-[1px] rounded-md p-3 pb-2 border-gray-800 placeholder-gray-300'
+                        value={budget}
+                        type='number'
+                        onFocus={handleFocus}
+                        onChange={handleChange}
+                    >
+                        <option selected>Choose a slab</option>
+                        <option value="5000">within 5000</option>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                        <option value="50000">50000</option>
+                        <option value="50000">50000+</option>
+                    </select>
+                </div>
+                <button type='submit' className='btn btn-primary mt-2'>
                     {button}
                     {/* <svg aria-hidden="true" class="w-6 h-6 rotate-90" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg> */}
                 </button>

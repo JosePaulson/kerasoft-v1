@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function ContactFooter() {
     const weather = 23
     return (
-        <div className='mx-10 md:mx-auto mt-10 tracking-wide flex flex-col md:justify-around md:flex-row'>
+        <div className='w-fit lg:w-[initial] mx-auto container mt-10 tracking-wide grid md:grid-cols-2 lg:grid-cols-4 lg:place-items-center gap-2 md:gap-16 lg:gap-8'>
             <div className=''>
                 <p className='mb-3 lg:mb-4 text-secondary lg:text-[1.2rem]'>Let's work together</p>
                 <Link to='/' className='text-lg lg:text-[1.2rem] mb-[.2rem] rounded-full text-primary-content w-[11.2rem] lg:w-[12.1rem] pt-[.4rem] py-1 px-2 pl-4 shadow flex bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:bg-gradient-to-l'>Start a Project <span className='ml-2 text-xl lg:text-2xl items-center '>→</span></Link>

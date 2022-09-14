@@ -38,7 +38,7 @@ function Web() {
     const {name, company, email, contact} = formData
     return ( 
         <div className="">
-            <div className='flex flex-col lg:flex-row lg:items-center lg:container mx-auto px-6 mt-5 lg:h-[90vh]'>
+            <div className='flex flex-col lg:flex-row lg:items-center lg:container mx-auto px-6 md:px-10 mt-5 lg:h-[90vh]'>
                 <div className="text-center pt-12 bg-[url('/src/images/webherobg.svg')] bg-cover lg:text-left lg:w-5/12 lg:mx-auto">
                     <h1 className="inline text-transparent text-3xl bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-primary drop-shadow-lg lg:text-4xl 2xl:text-[3.5rem] 2xl:leading-[4rem]">Web Applications <br /> Built To Go Fast</h1>
                     <p className="mt-4 text-xl font-thin lg:text-[1.45rem] 2xl:text-2xl 2xl:mt-6">We design and develop top-notch, high-performance stactic and dynamic webapps built with technologies like Jamstack, MERN, LAMP, Wordpress etc... </p>
@@ -46,19 +46,19 @@ function Web() {
                 </div>
                 <img className='mt-8 lg:w-5/12 md:w-8/12 mx-auto' src={WebBg} alt="" />
             </div>
-            <div className="bg-base-200 py-2 pb-6 flex flex-col lg:flex-row-reverse lg:h-[80vh] lg:px-20">
-                <div className='mt-2 mx-auto px-6 lg:container lg:self-center'>
-                    <div className='relative border-b-2 lg:border-b-[transparent] border-[#6B0C56ca] mb-6 mt-10 lg:mt-12'>
+            <div className="bg-base-200 py-2 pb-6 flex flex-col lg:flex-row-reverse lg:h-[80vh] xl:h-[60vh] lg:px-[5vw]">
+                <div className='mt-4 mx-auto px-6 md:px-10 lg:container lg:self-center'>
+                    <div className='relative border-b-2 lg:border-b-[transparent] border-[#6B0C56ca] mb-6 mt-10 md:mt-4'>
                         <p className='absolute pr-2 text-[#6B0C56ca] text-xl lg:text-2xl top-[-.9rem] font-medium bg-base-200'>WHY WEBSITE ?</p>
                     </div>
-                    <p className='text-lg lg:text-xl font-thin mb-1 lg:mb-2 px-1'> Did you know your business-website is often the first point of customer engagement. This is your opportunity to win over a client with just a few seconds to establish a positive first impression. </p>
-                    <p className='text-lg lg:text-xl font-thin mb-1 lg:mb-2 px-1'> We believe that a professionally designed website is crucial for the longevity and success of a business in today’s market.</p>
-                    <p className='text-lg lg:text-xl font-thin px-1 mb-5'> And it's not just about businesses, let it be porfolio or a service website; your reach to the intended audience will certainly go up exponentialy.</p>
+                    <p className='text-lg lg:text-xl 2xl:text-[1.35rem] font-thin mb-1 lg:mb-2 2xl:mb-3 px-1'> Did you know your business-website is often the first point of customer engagement. This is your opportunity to win over a client with just a few seconds to establish a positive first impression. </p>
+                    <p className='text-lg lg:text-xl 2xl:text-[1.35rem] font-thin mb-1 lg:mb-2 2xl:mb-3 px-1'> We believe that a professionally designed website is crucial for the longevity and success of a business in today’s market.</p>
+                    <p className='text-lg lg:text-xl 2xl:text-[1.35rem] font-thin px-1 mb-5'> And it's not just about businesses, let it be porfolio or a service website; your reach to the intended audience will certainly go up exponentialy.</p>
                 </div>
-                <img src={WhyWeb} alt="" className='lg:container px-6 md:w-9/12 mx-auto lg:w-5/12' />
+                <img src={WhyWeb} alt="" className='lg:container px-6 mt-[7vw] md:w-9/12 mx-auto lg:w-5/12 lg:mr-8' />
             </div>
             <div className="py-2">
-                <div className='mt-8 mx-auto px-6 lg:container grid lg:grid-cols-2 gap-8'>
+                <div className='mt-11 mx-auto px-6 md:px-10 lg:container grid lg:grid-cols-2 gap-8 lg:gap-12'>
                     <div className='lg:col-span-2'>
                         <div className='relative border-b-2 lg:border-b-[transparent] border-[#6B0C56ca] mb-6 mt-2 lg:mt-20'>
                             <p className='absolute pr-2 text-[#6B0C56ca] text-xl top-[-.9rem] bg-base-100 font-medium lg:text-2xl'>WEB SERVICES</p>
@@ -112,7 +112,7 @@ function Web() {
                     </div>
                 </div>
             </div>
-            <div className='text-[1.3rem] text-center py-4 px-6 lg:py-8 lg:pt-16 bg-[url("/src/images/extension.svg")] bg-contain bg-no-repeat bg-center'>
+            <div className='text-[1.3rem] text-center py-4 px-6 md:px-10 lg:py-8 lg:pt-16 bg-[url("/src/images/extension.svg")] bg-contain bg-no-repeat bg-center'>
                 <p className='inline text-transparent text-3xl lg:text-4xl bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-primary'>Custom Built <br /> Browser Extensions</p>
                 <p className='text-lg font-thin mt-2'>Let it be ads or pop-ups that's ruining your browsing experience, Or you'd like a custom feature added to your browser for better productivity? Reach out to us, we've got you covered.
                 </p>
