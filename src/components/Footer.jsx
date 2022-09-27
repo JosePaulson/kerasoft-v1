@@ -17,20 +17,21 @@ function Footer() {
                 </div> 
                 <div>
                     <span className="footer-title">Company</span>
-                    <Link to="/" className="link link-hover">About us</Link> 
-                    <a href="https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/contact_us" className="link link-hover">Contact us</a> 
-                    {/* <Link to="/contact" className="link link-hover">Contact</Link>  */}
+                    <Link to="/" className="link link-hover">About</Link> 
+                    {/* <a href="https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/contact_us" className="link link-hover">Contact us</a>  */}
+                    <Link to="/contact" className="link link-hover">Contact</Link> 
                     <Link to="/careers" className="link link-hover">Careers</Link> 
                     <Link to="/" className="link link-hover">Locate</Link>
                 </div> 
                 <div>
                     <span className="footer-title">Legal</span> 
-                    <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/terms' className="link link-hover">Terms and conditions</a> 
+                    {/* <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/terms' className="link link-hover">Terms</a> 
                     <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/refund' className="link link-hover">Cancellation and refund</a> 
                     <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/privacy' className="link link-hover">Privacy policy</a> 
-                    <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/shipping' className="link link-hover">Shipping and Delivery</a> 
-                    {/* <Link to='/privacy' className="link link-hover">Privacy policy</Link>  */}
-                    {/* <Link to='/cookie' className="link link-hover">Cookie policy</Link> */}
+                    <a href='https://merchant.razorpay.com/policy/KHjXWVO1JSWtKT/shipping' className="link link-hover">Shipping and Delivery</a>  */}
+                    <Link to='/terms' className="link link-hover">Terms and conditions</Link> 
+                    <Link to='/privacy' className="link link-hover">Privacy policy</Link> 
+                    <Link to='/cookie' className="link link-hover">Cookie policy</Link>
                 </div> 
                 <div className=''>
                     <span className="footer-title">Newsletter</span> 

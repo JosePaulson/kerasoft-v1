@@ -112,7 +112,7 @@ function Web() {
                     </div>
                 </div>
             </div>
-            <div className='text-[1.3rem] text-center py-4 px-6 md:px-10 lg:py-8 lg:pt-16 bg-[url("/src/images/extension.svg")] bg-contain bg-no-repeat bg-center'>
+            <div className='text-[1.3rem] text-center py-4 px-6 md:px-10 lg:py-8 lg:pt-16 2xl:pt-32 bg-[url("/src/images/extension.svg")] bg-contain bg-no-repeat bg-center'>
                 <p className='inline text-transparent text-3xl lg:text-4xl bg-clip-text bg-gradient-to-r from-orange-400 via-pink-500 to-primary'>Custom Built <br /> Browser Extensions</p>
                 <p className='text-lg font-thin mt-2'>Let it be ads or pop-ups that's ruining your browsing experience, Or you'd like a custom feature added to your browser for better productivity? Reach out to us, we've got you covered.
                 </p>

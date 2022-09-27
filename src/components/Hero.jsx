@@ -23,8 +23,8 @@ function Hero() {
     }
 
     return (
-        <div className="hero">
-            <div className="flex justify-around lg:flex-row hero-content mt-7 md:mt-0 flex-col lg:mx-16">
+        <div className="hero min-h-[85vh]">
+            <div className="flex justify-around lg:flex-row hero-content mt-7 md:mt-0 flex-col lg:mx-12">
                 <div className="lg:w-5/12 lg:ml-5 xl:ml-0 text-center lg:text-left mt-10 bg-[url('/src/images/herobg.svg')] bg-cover bg-[top_2rem]" >
                     <h1 className="scale-1 inline-block text-transparent bg-clip-text bg-gradient-to-r from-cyan-800 to-violet-800 drop-shadow-lg 2xl:text-7xl text-5xl md:text-6xl font-bold">Welcome <br /> to Kerasoft </h1>
                     <p className='2xl:text-2xl md:text-xl text-lg px-5 md:px-0 font-thin mt-2 sm:mx-6 md:mx-20 lg:mx-0'>Our goal is to provide the best and custom <em className='text-purple-800'>Embedded-Sys</em> solutions, ergo make your life simple!!</p>
